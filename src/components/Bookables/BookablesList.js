@@ -1,7 +1,6 @@
 import {useState} from 'react';
-import {bookables} from "../../static.json";
 
-export default function BookablesList () {
+export default function BookablesList ({bookables}) {
   const group = "Rooms";
   const bookablesInGroup = bookables.filter(b => b.group === group);
   const [bookableIndex, setBookableIndex] = useState(1);

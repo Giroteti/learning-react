@@ -1,7 +1,12 @@
+import UsersList from './UsersList'
+import {useUsers} from "./useUsers";
+
 export default function UsersPage () {
+  const users = useUsers()
   return (
     <main className="users-page">
-      <p>Users!</p>
+      <UsersList users={users}/>
     </main>
   );
 }
+
